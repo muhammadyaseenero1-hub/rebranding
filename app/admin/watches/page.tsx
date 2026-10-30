@@ -1,0 +1,1 @@
+import {redirect} from "next/navigation";import {getAdminSession} from "@/lib/supabase/admin-session";export const dynamic="force-dynamic";export default async function WatchIndex(){if(!await getAdminSession())redirect("/admin/login");redirect("/admin")}

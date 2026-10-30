@@ -1,0 +1,1 @@
+export default function Loading(){return <section className="cta" style={{minHeight:"60vh",display:"grid",placeContent:"center"}}><span className="eyebrow gold">VELMONT · GENEVA</span><h2>One moment.</h2><p>Preparing your experience.</p></section>}

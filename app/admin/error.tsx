@@ -1,0 +1,1 @@
+"use client";export default function AdminError({reset}:{error:Error&{digest?:string};reset:()=>void}){return <div className="admin-loading"><span className="eyebrow gold">VELMONT · WATCH MANAGEMENT</span><h1>We could not load<br/>this workspace.</h1><p>Check the connection and try again.</p><button className="admin-primary-button" onClick={()=>reset()}>Try again</button></div>}

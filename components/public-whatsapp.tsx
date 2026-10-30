@@ -1,0 +1,1 @@
+"use client";import {usePathname} from "next/navigation";import {FloatingWhatsApp} from "@/components/floating-whatsapp";export function PublicWhatsApp(){const pathname=usePathname();return pathname.startsWith("/admin")?null:<FloatingWhatsApp/>}

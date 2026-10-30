@@ -1,0 +1,4 @@
+import type {Metadata} from "next";import "./globals.css";import {PublicHeader} from "@/components/public-header";import {PublicFooter} from "@/components/public-footer";import {PublicWhatsApp} from "@/components/public-whatsapp";
+import {getWatches} from "@/lib/catalog";
+export const metadata:Metadata={title:{default:"VELMONT — Independent Swiss Watchmaking",template:"%s | VELMONT"},description:"Discover VELMONT: an independent Swiss watch maison creating considered timepieces in Geneva since 1987.",openGraph:{title:"VELMONT — Independent Swiss Watchmaking",description:"Time, shaped with intention.",type:"website"}};
+export default async function RootLayout({children}:{children:React.ReactNode}){const watches=await getWatches();const searchWatches=watches.map(({name,slug})=>({name,slug}));return <html lang="en"><body><PublicHeader watches={searchWatches}/><main>{children}</main><PublicFooter/><PublicWhatsApp/></body></html>}

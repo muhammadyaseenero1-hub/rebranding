@@ -1,0 +1,1 @@
+import Link from "next/link";export default function NotFound(){return <section className="cta" style={{minHeight:"70vh",display:"grid",placeContent:"center"}}><span className="eyebrow gold">404 · Page not found</span><h2>This moment<br/>has passed.</h2><p>The page you are looking for is no longer here.</p><Link className="button" href="/">Return to VELMONT</Link></section>}
